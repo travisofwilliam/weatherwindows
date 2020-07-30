@@ -29,7 +29,7 @@ const Index = () => {
     }
 
     const submitCity = () => {
-        axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`)
             .then(res => {
                 setResObj(res)
             })
@@ -51,7 +51,7 @@ const Index = () => {
                 <Dropdown />
                 <button 
                     className='btn-primary btn-block'
-                    style={{marginBottom: '15px', padding: '5px'}}
+                    style={{marginBottom: '15px', padding: '5px', borderRadius: '5px'}}
                     onClick={((e) => {
                         e.preventDefault()
                         setCity(text)
