@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import axios from 'axios'
 
+import Dropdown from '../components/Dropdown'
 import Navbar from '../components/Navbar'
 import ResultWindow from '../components/ResultWindow'
 
@@ -47,8 +48,9 @@ const Index = () => {
             }
             <form>
                 <input style={{width: '100%', marginBottom: '15px'}} value={text} placeholder='Search weather by city' onChange={handleChange} type="text" />
+                <Dropdown />
                 <button 
-                    className='btn-light btn-block'
+                    className='btn-primary btn-block'
                     style={{marginBottom: '15px', padding: '5px'}}
                     onClick={((e) => {
                         e.preventDefault()
